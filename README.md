@@ -53,3 +53,8 @@ b) `PLACE 0,0,NORTH LEFT REPORT` Output: `0,0,WEST`
 c) `PLACE 1,2,EAST MOVE MOVE LEFT MOVE REPORT` Output: `3,3,NORTH`
 
 Deliverables: The Ruby source files, the test data and any test code. It is not required to provide any graphical output showing the movement of the toy robot.
+
+## Usage
+
+- `app/toy_robot` for interactive mode
+- `app/toy_robot < file.txt` to read commands from a file

@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative '../boot'
+
+game = ToyRobot.new
+while str = gets&.chomp
+  game.play!(str)
+end
