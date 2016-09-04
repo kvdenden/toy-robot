@@ -16,10 +16,10 @@ class Direction
 
   class << self
     DIRECTIONS = {
-      north: Direction.new("NORTH", dx: 0, dy: 1),
-      east:  Direction.new("EAST", dx: -1, dy: 0),
-      south: Direction.new("SOUTH", dx: 0, dy: -1),
-      west:  Direction.new("WEST", dx: 1, dy: 0)
+      north: Direction.new("NORTH", dy: 1),
+      east:  Direction.new("EAST", dx: -1),
+      south: Direction.new("SOUTH", dy: -1),
+      west:  Direction.new("WEST", dx: 1)
     }
 
     def north

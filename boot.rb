@@ -10,3 +10,4 @@ end
 require 'robot'
 require 'direction'
 require 'position'
+require 'table'
