@@ -1,6 +1,9 @@
 class Robot
   attr_reader :position, :direction
 
+  extend Forwardable
+  def_delegators :position, :x, :y
+
   def initialize(position:, direction:)
     @position = position
     @direction = direction

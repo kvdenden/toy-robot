@@ -28,6 +28,4 @@ RSpec.describe Commands::Report do
       end
     end
   end
-
-
 end

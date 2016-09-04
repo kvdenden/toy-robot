@@ -1,7 +1,7 @@
 RSpec.describe World do
   let(:table) { double('table') }
   let(:robot) { double('robot') }
-  subject(:world) { World.new(table: table, robot: robot)}
+  subject(:world) { World.new(table: table, robot: robot) }
 
   its(:table) { is_expected.to eq(table) }
   its(:robot) { is_expected.to eq(robot) }
@@ -16,5 +16,4 @@ RSpec.describe World do
       expect(world.robot).to be_nil
     end
   end
-
 end
