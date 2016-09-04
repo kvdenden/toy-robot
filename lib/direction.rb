@@ -1,4 +1,6 @@
 class Direction
+  attr_reader :dx, :dy
+
   def left
     Direction.left(self)
   end
@@ -8,15 +10,16 @@ class Direction
   end
 
   private
-  def initialize(*args)
+  def initialize(name, dx: 0, dy: 0)
+    @dx, @dy = dx, dy
   end
 
   class << self
     DIRECTIONS = {
-      north: Direction.new("NORTH"),
-      east: Direction.new("EAST"),
-      south: Direction.new("SOUTH"),
-      west: Direction.new("WEST")
+      north: Direction.new("NORTH", dx: 0, dy: 1),
+      east:  Direction.new("EAST", dx: -1, dy: 0),
+      south: Direction.new("SOUTH", dx: 0, dy: -1),
+      west:  Direction.new("WEST", dx: 1, dy: 0)
     }
 
     def north

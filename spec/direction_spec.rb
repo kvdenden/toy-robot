@@ -1,8 +1,32 @@
 RSpec.describe Direction do
-  subject(:north) { Direction.north }
-  subject(:east) { Direction.east }
-  subject(:south) { Direction.south }
-  subject(:west) { Direction.west }
+  let(:north) { Direction.north }
+  let(:east) { Direction.east }
+  let(:south) { Direction.south }
+  let(:west) { Direction.west }
+
+  describe 'north' do
+    subject { north }
+    its(:dx) { is_expected.to eq(0) }
+    its(:dy) { is_expected.to eq(1) }
+  end
+
+  describe 'east' do
+    subject { east }
+    its(:dx) { is_expected.to eq(-1) }
+    its(:dy) { is_expected.to eq(0) }
+  end
+
+  describe 'south' do
+    subject { south }
+    its(:dx) { is_expected.to eq(0) }
+    its(:dy) { is_expected.to eq(-1) }
+  end
+
+  describe 'west' do
+    subject { west }
+    its(:dx) { is_expected.to eq(1) }
+    its(:dy) { is_expected.to eq(0) }
+  end
 
   describe 'turning left' do
     it 'turns from north to east' do
