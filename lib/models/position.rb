@@ -8,4 +8,13 @@ class Position
   def move(dir)
     Position.new(x + dir.dx, y + dir.dy)
   end
+
+  def ==(other)
+    other.class == self.class && other.state == self.state
+  end
+
+  protected
+  def state
+    [x, y]
+  end
 end

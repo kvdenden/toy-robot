@@ -24,4 +24,13 @@ class Robot
   def place(position:, direction:)
     Robot.new(position: position, direction: direction)
   end
+
+  def ==(other)
+    other.class == self.class && other.state == self.state
+  end
+
+  protected
+  def state
+    [position, direction]
+  end
 end

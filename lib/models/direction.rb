@@ -13,8 +13,16 @@ class Direction
     name
   end
 
-  private
+  def ==(other)
+    other.class == self.class && other.state == self.state
+  end
 
+  protected
+  def state
+    [name, dx, dy]
+  end
+
+  private
   def initialize(name, dx: 0, dy: 0)
     @name = name
     @dx = dx

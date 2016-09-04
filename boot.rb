@@ -14,3 +14,4 @@ require 'models/table'
 require 'models/world'
 
 require 'commands/report'
+require 'commands/left'
