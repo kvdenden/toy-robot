@@ -50,6 +50,27 @@ RSpec.describe Parser do
       it 'returns place command' do
         expect(command).to eq(place)
       end
+
+      context 'with invalid position' do
+        let(:input) { "PLACE x,y,#{direction}" }
+        it 'returns nil' do
+          expect(command).to be_nil
+        end
+      end
+
+      context 'with invalid direction' do
+        let(:input) { "PLACE #{position.x},#{position.y},UP" }
+        it 'returns nil' do
+          expect(command).to be_nil
+        end
+      end
+    end
+
+    context 'with invalid input' do
+      let(:input) { 'FOO' }
+      it 'returns nil' do
+        expect(command).to be_nil
+      end
     end
   end
 end

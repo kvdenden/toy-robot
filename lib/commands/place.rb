@@ -10,7 +10,7 @@ module Commands
     end
 
     def _call(_)
-      if world.table.valid_position?(position)
+      if world.table.valid_position?(position) && direction
         World.new(table: world.table, robot: Robot.new(position: position, direction: direction))
       end
     end

@@ -22,7 +22,15 @@ RSpec.describe Commands::Place do
       let(:position) { Position.new(-1, -1) }
 
       it 'returns world unchanged' do
-        expect(place.call(position: position, direction: direction)).to eq(world)
+        expect(place.call).to eq(world)
+      end
+    end
+
+    context 'when given an invalid direction' do
+      let(:direction) { nil }
+
+      it 'returns world unchanged' do
+        expect(place.call).to eq(world)
       end
     end
   end
