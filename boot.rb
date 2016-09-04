@@ -7,8 +7,8 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
   $LOAD_PATH.unshift File.expand_path(p, File.dirname(__FILE__))
 end
 
-require 'robot'
-require 'direction'
-require 'position'
-require 'table'
-require 'world'
+require 'models/robot'
+require 'models/direction'
+require 'models/position'
+require 'models/table'
+require 'models/world'
