@@ -8,24 +8,28 @@ RSpec.describe Direction do
     subject { north }
     its(:dx) { is_expected.to eq(0) }
     its(:dy) { is_expected.to eq(1) }
+    its(:to_s) { is_expected.to eq('NORTH') }
   end
 
   describe 'east' do
     subject { east }
     its(:dx) { is_expected.to eq(-1) }
     its(:dy) { is_expected.to eq(0) }
+    its(:to_s) { is_expected.to eq('EAST') }
   end
 
   describe 'south' do
     subject { south }
     its(:dx) { is_expected.to eq(0) }
     its(:dy) { is_expected.to eq(-1) }
+    its(:to_s) { is_expected.to eq('SOUTH') }
   end
 
   describe 'west' do
     subject { west }
     its(:dx) { is_expected.to eq(1) }
     its(:dy) { is_expected.to eq(0) }
+    its(:to_s) { is_expected.to eq('WEST') }
   end
 
   describe 'turning left' do

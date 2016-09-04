@@ -1,5 +1,5 @@
 class Direction
-  attr_reader :dx, :dy
+  attr_reader :name, :dx, :dy
 
   def left
     Direction.left(self)
@@ -9,8 +9,13 @@ class Direction
     Direction.right(self)
   end
 
+  def to_s
+    name
+  end
+
   private
   def initialize(name, dx: 0, dy: 0)
+    @name = name
     @dx, @dy = dx, dy
   end
 
