@@ -20,3 +20,4 @@ require 'commands/place'
 require 'commands/move'
 
 require 'parser'
+require 'toy_robot'

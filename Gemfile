@@ -6,6 +6,7 @@ gem 'rake'
 group :development, :test do
   gem 'rspec'
   gem 'rspec-its'
+  gem 'byebug', require: false
   gem 'rubocop', require: false
   gem 'simplecov', require: false
 end

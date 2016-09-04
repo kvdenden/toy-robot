@@ -34,9 +34,9 @@ class Direction
   class << self
     DIRECTIONS = {
       north: Direction.new('NORTH', dy: 1),
-      east:  Direction.new('EAST', dx: -1),
+      east:  Direction.new('EAST', dx: 1),
       south: Direction.new('SOUTH', dy: -1),
-      west:  Direction.new('WEST', dx: 1)
+      west:  Direction.new('WEST', dx: -1)
     }.freeze
 
     def find(key)
@@ -60,11 +60,11 @@ class Direction
     end
 
     def left(dir)
-      { north => east, east => south, south => west, west => north }.fetch(dir)
+      { north => west, west => south, south => east, east => north }.fetch(dir)
     end
 
     def right(dir)
-      { north => west, west => south, south => east, east => north }.fetch(dir)
+      { north => east, east => south, south => west, west => north }.fetch(dir)
     end
   end
 end

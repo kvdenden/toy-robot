@@ -13,7 +13,7 @@ RSpec.describe Direction do
 
   describe 'east' do
     subject { east }
-    its(:dx) { is_expected.to eq(-1) }
+    its(:dx) { is_expected.to eq(1) }
     its(:dy) { is_expected.to eq(0) }
     its(:to_s) { is_expected.to eq('EAST') }
   end
@@ -27,44 +27,44 @@ RSpec.describe Direction do
 
   describe 'west' do
     subject { west }
-    its(:dx) { is_expected.to eq(1) }
+    its(:dx) { is_expected.to eq(-1) }
     its(:dy) { is_expected.to eq(0) }
     its(:to_s) { is_expected.to eq('WEST') }
   end
 
   describe 'turning left' do
-    it 'turns from north to east' do
-      expect(north.left).to eq(east)
+    it 'turns from north to west' do
+      expect(north.left).to eq(west)
     end
 
-    it 'turns from east to south' do
-      expect(east.left).to eq(south)
+    it 'turns from west to south' do
+      expect(west.left).to eq(south)
     end
 
-    it 'turns from south to west' do
-      expect(south.left).to eq(west)
+    it 'turns from south to east' do
+      expect(south.left).to eq(east)
     end
 
-    it 'turns from west to north' do
-      expect(west.left).to eq(north)
+    it 'turns from east to north' do
+      expect(east.left).to eq(north)
     end
   end
 
   describe 'turning right' do
-    it 'turns from north to west' do
-      expect(north.right).to eq(west)
+    it 'turns from north to east' do
+      expect(north.right).to eq(east)
     end
 
-    it 'turns from west to south' do
-      expect(west.right).to eq(south)
+    it 'turns from east to south' do
+      expect(east.right).to eq(south)
     end
 
-    it 'turns from south to east' do
-      expect(south.right).to eq(east)
+    it 'turns from south to west' do
+      expect(south.right).to eq(west)
     end
 
-    it 'turns from east to north' do
-      expect(east.right).to eq(north)
+    it 'turns from west to north' do
+      expect(west.right).to eq(north)
     end
   end
 end
