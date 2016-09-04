@@ -8,3 +8,4 @@ Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 end
 
 require 'robot'
+require 'direction'
