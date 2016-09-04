@@ -4,7 +4,8 @@ module Commands
     def initialize(world:)
       @world = world
     end
-    def call(**args)
+
+    def call(_)
       world
     end
   end

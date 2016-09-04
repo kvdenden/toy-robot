@@ -10,10 +10,11 @@ class Position
   end
 
   def ==(other)
-    other.class == self.class && other.state == self.state
+    other.class == self.class && other.state == state
   end
 
   protected
+
   def state
     [x, y]
   end

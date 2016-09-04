@@ -14,15 +14,17 @@ class Direction
   end
 
   def ==(other)
-    other.class == self.class && other.state == self.state
+    other.class == self.class && other.state == state
   end
 
   protected
+
   def state
     [name, dx, dy]
   end
 
   private
+
   def initialize(name, dx: 0, dy: 0)
     @name = name
     @dx = dx

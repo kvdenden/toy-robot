@@ -8,21 +8,21 @@ RSpec.describe Robot do
 
   describe 'equality' do
     context 'when other robot has same position and direction' do
-      let(:other)  { Robot.new(position: origin, direction: north) }
+      let(:other) { Robot.new(position: origin, direction: north) }
       it 'returns true' do
         expect(robot == other).to eq(true)
       end
     end
 
     context 'when other robot has different position' do
-      let(:other)  { Robot.new(position: Position.new(1, 2), direction: north) }
+      let(:other) { Robot.new(position: Position.new(1, 2), direction: north) }
       it 'returns false' do
         expect(robot == other).to eq(false)
       end
     end
 
     context 'when other robot has different direction' do
-      let(:other)  { Robot.new(position: origin, direction: Direction.east) }
+      let(:other) { Robot.new(position: origin, direction: Direction.east) }
       it 'returns false' do
         expect(robot == other).to eq(false)
       end

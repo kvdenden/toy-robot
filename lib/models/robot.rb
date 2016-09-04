@@ -26,10 +26,11 @@ class Robot
   end
 
   def ==(other)
-    other.class == self.class && other.state == self.state
+    other.class == self.class && other.state == state
   end
 
   protected
+
   def state
     [position, direction]
   end
