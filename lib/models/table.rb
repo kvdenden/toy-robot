@@ -6,6 +6,6 @@ class Table
   end
 
   def valid_position?(pos)
-    pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height
+    pos && pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < height
   end
 end

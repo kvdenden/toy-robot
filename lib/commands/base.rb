@@ -5,8 +5,11 @@ module Commands
       @world = world
     end
 
-    def call(_)
-      world
+    def call(**args)
+      _call(args) || world
+    end
+
+    def _call(_)
     end
   end
 end
