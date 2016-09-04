@@ -18,3 +18,5 @@ require 'commands/left'
 require 'commands/right'
 require 'commands/place'
 require 'commands/move'
+
+require 'parser'

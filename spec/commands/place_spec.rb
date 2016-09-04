@@ -1,13 +1,13 @@
 RSpec.describe Commands::Place do
   let(:world) { World.create }
-  subject(:place) { Commands::Place.new(world: world) }
+  subject(:place) { Commands::Place.new(world: world, position: position, direction: direction) }
 
   describe 'call' do
     let(:position) { Position.new(0, 0) }
     let(:direction) { Direction.east }
 
     context 'when given a valid position' do
-      let(:robot) { place.call(position: position, direction: direction).robot }
+      let(:robot) { place.call.robot }
 
       it 'returns world with robot with given position' do
         expect(robot.position).to eq(position)

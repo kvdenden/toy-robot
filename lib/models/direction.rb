@@ -39,6 +39,10 @@ class Direction
       west:  Direction.new('WEST', dx: 1)
     }.freeze
 
+    def find(key)
+      DIRECTIONS[key]
+    end
+
     def north
       DIRECTIONS[:north]
     end

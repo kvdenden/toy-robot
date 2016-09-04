@@ -11,5 +11,15 @@ module Commands
 
     def _call(_)
     end
+
+    def ==(other)
+      other.class == self.class && other.state == state
+    end
+
+    protected
+
+    def state
+      [world]
+    end
   end
 end
